@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天气卡片</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <div class="card-header">
+                <h1><i class="fas fa-cloud-sun"></i> 天气卡片</h1>
+                <div class="date-time" id="datetime"></div>
+            </div>
+            
+            <div class="weather-info">
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="location">北京市</span>
+                </div>
+                
+                <div class="temperature">
+                    <div class="temp-main">
+                        <span id="temp">22</span>
+                        <span class="temp-unit">°C</span>
+                    </div>
+                    <div class="temp-feels">
+                        体感温度: <span id="feels-like">23</span>°C
+                    </div>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <i class="fas fa-wind"></i>
+                        <div class="detail-text">
+                            <span class="detail-label">风速</span>
+                            <span id="wind-speed">5.2</span> km/h
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <i class="fas fa-tint"></i>
+                        <div class="detail-text">
+                            <span class="detail-label">湿度</span>
+                            <span id="humidity">65</span>%
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <i class="fas fa-sun"></i>
+                        <div class="detail-text">
+                            <span class="detail-label">紫外线</span>
+                            <span id="uv-index">4</span> (中等)
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <i class="fas fa-cloud"></i>
+                        <div class="detail-text">
+                            <span class="detail-label">云量</span>
+                            <span id="cloud-cover">40</span>%
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="weather-description">
+                    <i class="fas fa-cloud-sun" id="weather-icon"></i>
+                    <span id="weather-desc">多云转晴</span>
+                </div>
+                
+                <div class="forecast">
+                    <h3><i class="fas fa-calendar-alt"></i> 未来3小时预报</h3>
+                    <div class="forecast-items">
+                        <div class="forecast-item">
+                            <div class="forecast-time">现在</div>
+                            <div class="forecast-icon"><i class="fas fa-cloud-sun"></i></div>
+                            <div class="forecast-temp">22°C</div>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="forecast-time">+1h</div>
+                            <div class="forecast-icon"><i class="fas fa-sun"></i></div>
+                            <div class="forecast-temp">23°C</div>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="forecast-time">+2h</div>
+                            <div class="forecast-icon"><i class="fas fa-sun"></i></div>
+                            <div class="forecast-temp">24°C</div>
+                        </div>
+                        <div class="forecast-item">
+                            <div class="forecast-time">+3h</div>
+                            <div class="forecast-icon"><i class="fas fa-cloud"></i></div>
+                            <div class="forecast-temp">21°C</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card-footer">
+                <button id="refresh-btn"><i class="fas fa-sync-alt"></i> 刷新天气</button>
+                <button id="location-btn"><i class="fas fa-search-location"></i> 切换城市</button>
+            </div>
+        </div>
+        
+        <div class="info-note">
+            <p><i class="fas fa-info-circle"></i> 这是一个静态天气卡片示例，数据为模拟数据。</p>
+            <p>如需真实天气数据，需要接入天气API。</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
